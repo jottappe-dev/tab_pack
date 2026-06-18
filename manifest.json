@@ -1,0 +1,26 @@
+{
+  "manifest_version": 3,
+  "name": "TabPack — Compactador de Abas",
+  "version": "1.0.0",
+  "description": "Compacte múltiplas abas em uma única aba hibernada. Restaure quando precisar.",
+  "permissions": ["tabs", "storage"],
+  "action": {
+    "default_popup": "popup.html",
+    "default_title": "TabPack"
+  },
+  "background": {
+    "service_worker": "background.js"
+  },
+  "icons": {
+    "16": "icons/icon16.png",
+    "32": "icons/icon32.png",
+    "48": "icons/icon48.png",
+    "128": "icons/icon128.png"
+  },
+  "web_accessible_resources": [
+    {
+      "resources": ["group.html", "shared.js", "icons/*"],
+      "matches": ["<all_urls>"]
+    }
+  ]
+}
